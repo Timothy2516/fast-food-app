@@ -1,13 +1,13 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-menu-button color="primary"></ion-menu-button>
-        </ion-buttons>
+            <ion-menu-button id="notification-button">
+              <ion-icon aria-hidden="true" :icon="reorderTwo" size="large" style="color: #D71820;"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
         <ion-title>{{ $route.params.id }}</ion-title>
       </ion-toolbar>
-    </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
@@ -25,7 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { reorderTwo } from 'ionicons/icons';
 </script>
 
 <style scoped>
