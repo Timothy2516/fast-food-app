@@ -24,24 +24,22 @@
               </ion-col>
             </ion-row>
           </ion-grid>
-          <ion-list id="inbox-list" >
+          <ion-list id="inbox-list" style="border-bottom: 1px solid gray;">
             <ion-list-header>{{accountName}}</ion-list-header>
             <ion-note>{{accountContact}}</ion-note>
 
             <ion-menu-toggle :auto-hide="false" v-for="(p, i) in appPages" :key="i">
               <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" :detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
-                <ion-icon aria-hidden="true" slot="start" :ios="p.iosIcon" :md="p.mdIcon"></ion-icon>
+                <ion-icon aria-hidden="true" slot="start" :ios="p.iosIcon" :md="p.iosIcon"></ion-icon>
                 <ion-label>{{ p.title }}</ion-label>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
 
-          <hr style="border-bottom: 1px solid gray;width: 85%; display: none;">
-
           <ion-list id="labels-list">
-            <ion-item v-for="(label, index) in labels" lines="none" :key="index">
-              <ion-icon aria-hidden="true" slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
+            <ion-item v-for="(item, index) in profileMenu" lines="none" :key="index">
+              <ion-icon aria-hidden="true" slot="start" :ios="item.iosIcon" :md="item.iosIcon"></ion-icon>
+              <ion-label>{{ item.title }}</ion-label>
             </ion-item>
           </ion-list>
         </ion-content>
@@ -81,10 +79,17 @@ import {
   storefrontSharp,
   helpCircleOutline,
   helpCircleSharp,
-  
-  bookmarkOutline,
-  bookmarkSharp,
   chevronForward,
+bagHandleOutline,
+hourglassOutline,
+bagHandleSharp,
+heartOutline,
+heartSharp,
+hourglassSharp,
+locationOutline,
+locationSharp,
+personOutline,
+personSharp,
 } from 'ionicons/icons';
 import router from './router';
 
@@ -127,7 +132,33 @@ const appPages = [
     mdIcon: helpCircleSharp,
   }
 ];
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel'];
+const profileMenu = [
+{
+    title: 'My Orders',
+    iosIcon: bagHandleOutline,
+    mdIcon: bagHandleSharp,
+  },
+  {
+    title: 'My Account',
+    iosIcon: personOutline,
+    mdIcon: personSharp,
+  },
+  {
+    title: 'My Favorites',
+    iosIcon: heartOutline,
+    mdIcon: heartSharp,
+  },
+  {
+    title: 'Order Tracker',
+    iosIcon: locationOutline,
+    mdIcon: locationSharp,
+  },
+  {
+    title: "Order History",
+    iosIcon: hourglassOutline,
+    mdIcon: hourglassSharp,
+  }
+];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {

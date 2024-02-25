@@ -103,7 +103,7 @@
                         <ion-row  style="margin-top: 0px;">
                             <ion-col size="4.5" class="centeredContent">
                                 <div class="grayCapsule2">
-                                    <ion-icon aria-hidden="true" size="small" :icon="add" style="color: #D71820;"></ion-icon>
+                                    <ion-icon aria-hidden="true" size="small" :icon="remove" style="color: #D71820;"></ion-icon>
                                 </div>
                             </ion-col>
                             <ion-col size="3" class="centeredContent">{{ addAddOnsCounter }}</ion-col>
@@ -143,7 +143,7 @@
                         <ion-row  style="margin-top: 0px;">
                             <ion-col size="4.5" class="centeredContent">
                                 <div class="grayCapsule2">
-                                    <ion-icon aria-hidden="true" size="small" :icon="add" style="color: #D71820;"></ion-icon>
+                                    <ion-icon aria-hidden="true" size="small" :icon="remove" style="color: #D71820;"></ion-icon>
                                 </div>
                             </ion-col>
                             <ion-col size="3" class="centeredContent">{{ addAddOnsCounter }}</ion-col>
@@ -272,17 +272,6 @@
     -webkit-border-radius: 20px 20px 0 0;
     text-align: center;
     }
-
-    .text {
-    color: white;
-    font-weight: 900;
-    position: absolute;
-    top: 60px;
-    right:0;
-    left:0;
-    text-align: center;
-    }
-
   ion-searchbar {
     text-align: start;
   }
@@ -362,11 +351,6 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  }
-  .centeredInlineContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   }
 
   .leftContent {

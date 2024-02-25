@@ -84,7 +84,7 @@
                                     <ion-col size="5" style="color: #D71820;"><h2>P 172</h2></ion-col>
                                     <ion-col size="3" class="centeredContent">
                                         <div class="grayCapsule2">
-                                            <ion-icon aria-hidden="true" size="small" :icon="add" style="color: #D71820;"></ion-icon>
+                                            <ion-icon aria-hidden="true" size="small" :icon="remove" style="color: #D71820;"></ion-icon>
                                         </div>
                                     </ion-col>
                                     <ion-col size="1" class="centeredContent">{{ addAddOnsCounter }}</ion-col>
@@ -232,7 +232,7 @@
     }
 
     const routerBack = () => {
-        router.push('/orderNow')
+        router.push('/addToBag')
     }
     const addAddOnsCounter = 1;
     const accountName = "Myoui Mina"; 

@@ -222,9 +222,6 @@
       width: 150px;
       --border-radius: 15px;
     }
-    .swiper .swiper-slide img {
-        border-radius: 20px;
-    }
 
     #cont {
     width: 250px;
@@ -236,59 +233,12 @@
     text-align: center;
     }
 
-    .text {
-    color: white;
-    font-weight: 900;
-    position: absolute;
-    top: 60px;
-    right:0;
-    left:0;
-    text-align: center;
-    }
-
-    .circle1 {
-    background: white;
-    position: absolute;
-    top: 80px;
-    left: 325px;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    }
-    .category1 {
-    position: absolute;
-    top: 220px;
-    left: 20px;
-    color: white;
-    }
-    .circle2 {
-    background: white;
-    position: absolute;
-    top: 80px;
-    left: -17px;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    }
-
   ion-searchbar {
     text-align: start;
   }
 
   ion-label {
    font-weight: 600;
-  }
-  .pointsLabelArrow {
-    display: grid;
-    justify-content: start;
-    align-content: center;
-  }
-  .pointsLabel {
-    display: grid;
-    justify-content: center;
-    align-content: center;
   }
   .redCapsule {
     border: 2px solid #D71820;
@@ -297,18 +247,7 @@
     border-radius: 15px;
     background-color: #D71820;
   }
-  .grayTextGrayCapsule {
-    border: 2px solid #E8ECEE;
-    padding: 8px;
-    color: #6C757D;
-    border-radius: 15px;
-    background-color: #E8ECEE;
-  }
-  .grayCapsule {
-    border: 2px solid #E8ECEE;
-    border-radius: 15px;
-    background-color: #E8ECEE;
-  }
+
   ion-note {
     margin-left: 5px;
     margin-right: 5px;
@@ -323,11 +262,6 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  }
-  .centeredInlineContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   }
 
   .leftContent {
@@ -408,18 +342,5 @@
     letter-spacing: 2px;
   }
 
-  .orderNow{
-        position: fixed;
-        top: 91%;
-        right: 5%;
-        border: 2px solid #D71820;
-        color: white;
-        padding: 8px 40px;
-        border-radius: 20px;
-        background-color: #D71820;
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
   </style>
   
